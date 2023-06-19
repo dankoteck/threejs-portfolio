@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { Tilt } from "react-tilt";
 import { services } from "../constants";
-import { verticalVariants, horizontalVariants } from "../utils/motion";
+import { horizontalVariants, verticalVariants } from "../utils/motion";
 
 export default function About() {
   return (
