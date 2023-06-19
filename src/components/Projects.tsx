@@ -22,7 +22,7 @@ export default function Projects() {
         className="flex flex-col items-center justify-center gap-4"
       >
         <h1 className="text-6xl uppercase">Projects.</h1>
-        <span className="block text-2xl uppercase text-slate-300">
+        <span className="block text-2xl text-center uppercase text-slate-300">
           Showcase of my latest works, projects and developments
         </span>
       </motion.div>
@@ -33,11 +33,7 @@ export default function Projects() {
             key={project.title}
             icon={project.image}
             className="shadow-lg vertical-timeline-element--work"
-            contentStyle={{
-              background: "rgb(29, 24, 54)",
-              color: "#fff",
-              boxShadow: "0 25px 120px -7px rgb(6 182 212 / 0.56",
-            }}
+            contentStyle={{ background: "rgb(29, 24, 54)", color: "#fff" }}
             contentArrowStyle={{ borderRight: `7px solid rgb(29, 24, 54)` }}
             iconStyle={{ background: "rgb(56, 62, 86)", color: "#fff" }}
           >
@@ -48,7 +44,7 @@ export default function Projects() {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-slate-300 text-black mr-2"
+                    className="cursor-default inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-[#5cd2b93d] text-white mr-2"
                   >
                     {tag}
                   </span>
@@ -70,7 +66,7 @@ export default function Projects() {
                   <a
                     href={project.visitLink}
                     target="_blank"
-                    className="px-8 py-2 text-black rounded-md bg-slate-300"
+                    className="px-8 py-2 text-[#100d25] bg-white rounded-md"
                   >
                     Visit
                   </a>
@@ -79,7 +75,7 @@ export default function Projects() {
                   <a
                     href={project.sourceLink}
                     target="_blank"
-                    className="px-8 py-2 text-black rounded-md bg-slate-300"
+                    className="px-8 py-2 text-[#100d25] bg-white rounded-md"
                   >
                     Source Code
                   </a>

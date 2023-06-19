@@ -1,14 +1,33 @@
+import { useEffect, useState } from "react";
 import Logo from "../assets/logos/logo-color.png";
 import { navLinks } from "../constants";
 
 export default function Header() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.scrollY;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const goHomepage = () => {
     history.pushState(null, "", "/");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <nav className="fixed top-0 left-0 z-20 w-full bg-black">
+    <nav
+      className={`${
+        scrollPosition > 120 ? "bg-black" : "bg-transparent"
+      } fixed top-0 left-0 z-20 w-full transition duration-300`}
+    >
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-16 py-4 mx-auto">
         <div role="button" onClick={goHomepage} className="flex items-center">
           <img src={Logo} className="h-16 mr-3" alt="Logo" />

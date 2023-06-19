@@ -26,33 +26,26 @@ export default function About() {
         </span>
       </motion.div>
 
-      <div className="flex flex-wrap gap-10 mt-20">
+      <div className="grid grid-cols-2 gap-10 mt-20">
         {services.map((item, index) => (
-          <Tilt
-            className="w-full sm:w-64"
+          <motion.div
             key={index}
-            options={{
-              max: 45,
-              scale: 1,
-              speed: 450,
-            }}
+            initial="hidden"
+            whileInView="visible"
+            variants={verticalVariants()}
+            viewport={{ once: true, amount: 0.25 }}
+            className="flex flex-col items-center w-full px-8 py-6 space-y-4 transition duration-300 cursor-pointer hover:!-translate-y-4 green-gradient justify-evenly"
           >
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              variants={verticalVariants()}
-              viewport={{ once: true, amount: 0.25 }}
-              className="w-full rounded-md violet-gradient"
-            >
-              <div className="flex flex-col items-center px-12 py-5 violet-gradient rounded-3xl h-72 justify-evenly">
-                <span className="w-4 h-4">{item.icon}</span>
+            <span className="w-28 h-28">{item.image}</span>
 
-                <h3 className="text-2xl font-bold text-center text-white">
-                  {item.name}
-                </h3>
-              </div>
-            </motion.div>
-          </Tilt>
+            <h3 className="text-2xl font-bold text-center text-white">
+              {item.name}
+            </h3>
+
+            <p className="text-base text-center text-white">
+              {item.description}
+            </p>
+          </motion.div>
         ))}
       </div>
     </section>

@@ -61,14 +61,14 @@ export default function Contact() {
       </span>
 
       <div
-        className={`xl:mt-12 flex xl:flex-row-reverse flex-col-reverse gap-10 overflow-hidden`}
+        className={`xl:mt-12 flex xl:flex-row-reverse flex-col gap-10 overflow-hidden`}
       >
         <motion.div
           initial="hidden"
           whileInView="visible"
           variants={verticalVariants()}
           viewport={{ once: true, amount: 0.25 }}
-          className="flex-1 p-8 bg-gray-900 rounded-2xl"
+          className="flex-1 min-w-0 p-8 bg-gray-900 rounded-2xl"
         >
           <h3 className="text-6xl font-extrabold text-white uppercase">
             Contact.
@@ -98,14 +98,14 @@ export default function Contact() {
                 name="email"
                 value={form.email}
                 onChange={onChange}
-                placeholder="What's your web address?"
+                placeholder="What's your email?"
                 className="px-6 py-4 font-medium text-white bg-[#090325] border-none rounded-lg outline-none placeholder:text-slate-400"
               />
             </label>
             <label className="flex flex-col">
               <span className="mb-4 font-medium text-white">Message</span>
               <textarea
-                rows={7}
+                rows={4}
                 name="message"
                 value={form.message}
                 onChange={onChange}
@@ -128,7 +128,7 @@ export default function Contact() {
           whileInView="visible"
           variants={horizontalVariants()}
           viewport={{ once: true, amount: 0.25 }}
-          className="xl:flex-1 xl:h-auto md:h-[500px] h-96"
+          className="min-w-0 xl:flex-1"
         >
           <EarthCanvas />
         </motion.div>

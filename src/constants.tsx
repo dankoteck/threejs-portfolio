@@ -25,6 +25,10 @@ import ecommerceThumbnail from "./assets/projects-thumbnail/ecommerce.png";
 import airbnbCloneThumbnail from "./assets/projects-thumbnail/airbnb-clone.png";
 import threejsPortfolioThumbnail from "./assets/projects-thumbnail/threejs-portfolio.png";
 
+// Services Images
+import webDevelopmentImage from "./assets/services/web-development.png";
+import webUIUXImage from "./assets/services/web-uiux.png";
+
 export const navLinks = [
   {
     name: "About",
@@ -43,6 +47,10 @@ export const navLinks = [
     href: "#projects",
   },
   {
+    name: "Testimonials",
+    href: "#testimonials",
+  },
+  {
     name: "Contact",
     href: "#contact",
   },
@@ -51,15 +59,27 @@ export const navLinks = [
 export const services = [
   {
     name: "Web Development",
-    icon: "💻",
+    image: (
+      <img
+        className="block w-auto h-auto"
+        src={webDevelopmentImage}
+        alt="Service: Web Development"
+      />
+    ),
     description:
-      "I build websites using modern technologies like React, Next.js, and Gatsby.",
+      "Creating tailor-made websites and applications to help clients achieve their online goals.",
   },
   {
-    name: "Freelancer",
-    icon: "👨‍💻",
+    name: "Web UI/UX Design",
+    image: (
+      <img
+        className="block w-auto h-auto"
+        src={webUIUXImage}
+        alt="Service: Web UI/UX Design"
+      />
+    ),
     description:
-      "I am available for freelance work. Connect with me via email or LinkedIn.",
+      "Crafting intuitive and visually appealing user experiences that captivate and engage.",
   },
 ];
 
@@ -86,7 +106,7 @@ export const works = [
       "Conducting code reviews and providing feedback to team members to ensure code quality and consistency.",
       "Participating in project planning and estimation to deliver work on time and within budget.",
       "Contributing to all modules of the HRM application, including Employee Management, Time Off, Reports, Dashboard, Timekeeping and Salary.",
-      "Collaborating with cross-functional teams, including UI/UX designers and back-end developers to develop high-quality, scalable, and maintainable web app.",
+      // "Collaborating with cross-functional teams, including UI/UX designers and back-end developers to develop high-quality, scalable, and maintainable web app.",
     ],
     image: (
       <img className="rounded-full mt-[25%]" src={eCom365Logo} alt="eCom365" />
