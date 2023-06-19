@@ -2,15 +2,15 @@ import Logo from "../assets/logos/logo-color.png";
 import { navLinks } from "../constants";
 
 export default function Header() {
-  const onGoto = () => {
+  const goHomepage = () => {
     history.pushState(null, "", "/");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <nav className="fixed top-0 left-0 z-20 w-full bg-transparent">
+    <nav className="fixed top-0 left-0 z-20 w-full bg-black">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-16 py-4 mx-auto">
-        <div role="button" onClick={onGoto} className="flex items-center">
+        <div role="button" onClick={goHomepage} className="flex items-center">
           <img src={Logo} className="h-16 mr-3" alt="Logo" />
 
           <span className="self-center text-2xl font-bold whitespace-nowrap dark:text-white">

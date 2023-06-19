@@ -1,6 +1,29 @@
+// Company Logos
 import eCom365Logo from "./assets/company/ecom365.webp";
 import antsomiLogo from "./assets/company/antsomi.png";
 import metasolutionsLogo from "./assets/company/metasolutions.jpeg";
+
+// Tech Icons
+import HTMLIcon from "./assets/tech/html.png";
+import CSSIcon from "./assets/tech/css.png";
+import JSIcon from "./assets/tech/javascript.png";
+import TSIcon from "./assets/tech/typescript.png";
+import ReactIcon from "./assets/tech/reactjs.png";
+import ReduxIcon from "./assets/tech/redux.png";
+import GitIcon from "./assets/tech/git.png";
+import TailwindIcon from "./assets/tech/tailwind.png";
+import FigmaIcon from "./assets/tech/figma.png";
+import NextIcon from "./assets/tech/nextjs.png";
+import ThreejsIcon from "./assets/tech/threejs.svg";
+import MongoIcon from "./assets/tech/mongodb.png";
+import VSCodeIcon from "./assets/tech/vscode.png";
+import PostmanIcon from "./assets/tech/postman.png";
+import GithubIcon from "./assets/tech/github.png";
+
+// Projects Thumbnail
+import ecommerceThumbnail from "./assets/projects-thumbnail/ecommerce.png";
+import airbnbCloneThumbnail from "./assets/projects-thumbnail/airbnb-clone.png";
+import threejsPortfolioThumbnail from "./assets/projects-thumbnail/threejs-portfolio.png";
 
 export const navLinks = [
   {
@@ -8,8 +31,16 @@ export const navLinks = [
     href: "#about",
   },
   {
-    name: "Work",
-    href: "#work",
+    name: "Works",
+    href: "#works",
+  },
+  {
+    name: "Skills",
+    href: "#skills",
+  },
+  {
+    name: "Projects",
+    href: "#projects",
   },
   {
     name: "Contact",
@@ -77,4 +108,56 @@ export const works = [
   },
 ];
 
-const projects = [];
+export const skills = [
+  HTMLIcon,
+  CSSIcon,
+  JSIcon,
+  TSIcon,
+  ReactIcon,
+  ReduxIcon,
+  TailwindIcon,
+  MongoIcon,
+  NextIcon,
+];
+
+export const tools = [GitIcon, FigmaIcon, VSCodeIcon, PostmanIcon, GithubIcon];
+
+export const projects = [
+  {
+    title: "Ecommerce App",
+    subtitle: "Next.js Project",
+    description:
+      "An Ecommerce App built with Next.js and Tailwind CSS. Deployed on Vercel.",
+    thumbnail: <img src={ecommerceThumbnail} alt="Ecommerce App" />,
+    visitLink: "https://extremely-advanced-ecommerce-maybe.vercel.app/",
+    sourceLink: "https://github.com/lekhoa011159CloneShowcase/ecommerce-app",
+    tags: ["Next.js", "Tailwind", "React", "Vercel"],
+    image: <img className="rounded-full invert" src={NextIcon} alt="Next.js" />,
+  },
+  {
+    title: "Airbnb Clone",
+    subtitle: "Next.js Project",
+    description:
+      "An Airbnb Clone built with Next.js and Tailwind CSS. Deployed on Vercel.",
+    thumbnail: <img src={airbnbCloneThumbnail} alt="Airbnb Clone" />,
+    visitLink: "https://airbnb-clone-full-options.vercel.app/",
+    sourceLink:
+      "https://github.com/lekhoa011159CloneShowcase/airbnb-clone-full-options",
+    tags: ["Next.js", "Tailwind", "React", "Vercel"],
+    image: <img className="rounded-full invert" src={NextIcon} alt="Next.js" />,
+  },
+  {
+    title: "Three.js Portfolio",
+    subtitle: "Three.js Project",
+    description:
+      "An Threejs portfolio built with React and animations using Three.js. Deployed on Vercel.",
+    thumbnail: <img src={threejsPortfolioThumbnail} alt="Three.js Portfolio" />,
+    visitLink: "https://threejs-portfolio-dusky.vercel.app/",
+    sourceLink:
+      "https://github.com/lekhoa011159CloneShowcase/threejs-portfolio",
+    tags: ["React", "Animation", "Tailwind", "Three.js"],
+    image: (
+      <img className="rounded-full invert" src={ThreejsIcon} alt="Three.js" />
+    ),
+  },
+];

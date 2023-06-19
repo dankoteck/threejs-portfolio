@@ -42,9 +42,9 @@ export default function About() {
               whileInView="visible"
               variants={verticalVariants()}
               viewport={{ once: true, amount: 0.25 }}
-              className="w-full shadow-cyan-500/50 shadow-2xl p-0.5 rounded-3xl green-pink-gradient"
+              className="w-full rounded-md violet-gradient"
             >
-              <div className="bg-[#151030] flex flex-col items-center px-12 py-5 rounded-3xl h-72 justify-evenly">
+              <div className="flex flex-col items-center px-12 py-5 violet-gradient rounded-3xl h-72 justify-evenly">
                 <span className="w-4 h-4">{item.icon}</span>
 
                 <h3 className="text-2xl font-bold text-center text-white">

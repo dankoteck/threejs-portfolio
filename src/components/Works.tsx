@@ -1,24 +1,24 @@
+import { AcademicCapIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
-import { verticalVariants } from "../utils/motion";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { works } from "../constants";
-import { AcademicCapIcon } from "@heroicons/react/24/outline";
+import { horizontalVariants } from "../utils/motion";
 
 export default function Works() {
   return (
     <section className="relative z-0 p-16 mx-auto space-y-16 max-w-7xl">
-      <span className="thresh-hold" id="work">
+      <span className="thresh-hold" id="works">
         &nbsp;
       </span>
 
       <motion.div
         initial="hidden"
         whileInView="visible"
-        variants={verticalVariants()}
+        variants={horizontalVariants()}
         viewport={{ once: true, amount: 0.25 }}
         className="flex flex-col items-center justify-center gap-4"
       >
